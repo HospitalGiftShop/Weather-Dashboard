@@ -34,11 +34,13 @@ class WeatherService {
   // TODO: Define the baseURL, API key, and city name properties
   baseURL: string;
   apiKey: string;
+  nodeENV: string;
   cityName: string;
 
   constructor(cityName: string) {
     this.baseURL = `${process.env.API_BASE_URL}`
     this.apiKey = `${process.env.API_KEY}`
+    this.nodeENV = `${process.env.NODE_ENV}`
     this.cityName = cityName
   }
   // TODO: Create fetchLocationData method
